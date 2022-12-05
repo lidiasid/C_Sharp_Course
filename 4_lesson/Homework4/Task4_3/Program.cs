@@ -1,12 +1,11 @@
-﻿System.Console.WriteLine("Введите число: ");
-int number = int.Parse(Console.ReadLine());
-string num1 = number.ToString();
-int result = 0;
+﻿// Задача 3: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-for (int i = 0; i < num1.Length; i++)
+int[] array = new int[8];
+
+for(int i = 0; i < 8; i++)
 {
-    result = result + num1[i];
-    System.Console.WriteLine(result);
-}
-
-System.Console.WriteLine(result);
+    array[i] = new Random().Next(100);
+    
+}    
+string str = string.Join(" ", array);
+Console.WriteLine($"[{str}]");
